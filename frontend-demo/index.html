@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CMU Sidequest Randomizer — Backend Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>CMU Sidequest Randomizer</h1>
+    <p class="subtitle">Minimal HW4 frontend → backend demo.</p>
+
+    <section class="controls">
+      <label>
+        Time available
+        <select id="time">
+          <option value="1">1 hour</option>
+          <option value="2">2 hours</option>
+          <option value="3" selected>3 hours</option>
+          <option value="6">6 hours</option>
+          <option value="12">12 hours</option>
+        </select>
+      </label>
+
+      <label>
+        Max distance
+        <select id="distance">
+          <option value="1">1 mile</option>
+          <option value="3">3 miles</option>
+          <option value="5">5 miles</option>
+          <option value="10" selected>10 miles</option>
+          <option value="25">25 miles</option>
+        </select>
+      </label>
+
+      <label>
+        Budget
+        <select id="budget">
+          <option value="free">Free only</option>
+          <option value="paid" selected>Paid is okay</option>
+        </select>
+      </label>
+
+      <label>
+        Who's coming?
+        <select id="group">
+          <option value="solo">Solo</option>
+          <option value="friends" selected>Some friends</option>
+          <option value="group">Whole group</option>
+        </select>
+      </label>
+
+      <button id="go">Give me a sidequest</button>
+    </section>
+
+    <p id="status" aria-live="polite"></p>
+
+    <article id="result" class="card hidden">
+      <p id="category" class="eyebrow"></p>
+      <h2 id="title"></h2>
+      <p id="description"></p>
+      <p id="address" class="muted"></p>
+      <div id="stats"></div>
+    </article>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
